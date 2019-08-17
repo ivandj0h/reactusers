@@ -6,9 +6,10 @@ const Users = ({kumpulanUsers}) => {
 
         const listUsers = kumpulanUsers.map(users => {
             return (
-                <div className="kotak" key={users.id}>
-                    Nama : <b>{users.nama}</b> <br />
-                    Umur : <b>{users.umur} Tahun</b>
+                <div className="card bg-light mb-3">
+                    <div className="card-body" key={users.id}>
+                        <h4 className="card-title"><b>{users.nama}</b></h4>
+                    </div>
                 </div>
             )
         })

@@ -15,7 +15,6 @@ export class App extends Component {
     render() {
         return (
             <div className="container">
-                <h4>Data User</h4>
                 <Users kumpulanUsers={ this.state.users } />
             </div>
         )
