@@ -9,6 +9,7 @@ const Users = ({kumpulanUsers}) => {
                 <div className="card bg-light mb-3">
                     <div className="card-body" key={users.id}>
                         <h4 className="card-title"><b>{users.nama}</b></h4>
+                        <p className="card-text"><b>{users.hobby}</b></p>
                     </div>
                 </div>
             )
