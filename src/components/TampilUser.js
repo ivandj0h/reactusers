@@ -6,18 +6,17 @@ import React from 'react'
 */
 
 const TampilUser = ({kumpulanUsers}) => {
-
-    // Selanjutnya kita akan coba menggunakan kondisional
     
         const listUsers = kumpulanUsers.map(users => {
-            let listStyle = users.umur >= 11 ? ('card text-white bg-success mb-3') : ( null )
+            let listStyle = users.umur >= 11 ? ('card border-secondary mb-3') : ( null )
 
             return (
-                <div className={listStyle || "card text-white bg-danger mb-3"} key={users.id}>
+                <div className={listStyle || "card border-danger mb-3"} key={users.id}>
+                    <div className="card-header"><h3>{users.nama}</h3></div>
                     <div className="card-body">
-                        <h4 className="card-title"><b>{users.nama}</b></h4>
                         <p className="card-text">Umur : <b>{users.umur}</b> Tahun</p>
                         <p className="card-text">Hobby : <b>{users.hobby}</b></p>
+                        <p className="card-text">Alamat : <b>{users.alamat}</b></p>
                     </div>
                 </div>
             )
